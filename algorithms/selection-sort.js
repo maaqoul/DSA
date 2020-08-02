@@ -12,14 +12,13 @@ const swap = (arr, i, j) => [arr[i], arr[j]] = [arr[j], arr[i]]
 
 function selectionSort(arr) {
     for (let i = 0; i < arr.length; i++) {
-        let minimumIndex = i;
-        let minimumValue = arr[i];
-        for (let j = i; j < arr.length; j++) {
-            if (arr[j] < minimumValue) {
-                minimumIndex = j;
+        let minimum = i;
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[minimum]) {
+                minimum = j;
             }
         }
-        swap(arr, i, minimumIndex)
+        swap(arr, i, minimum)
     }
     return arr;
 }
