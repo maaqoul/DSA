@@ -6,6 +6,8 @@
  * let s swap them [17, 27, 40, 35, 59, 97] and the algorithm goes on till there is no smaller value from the value in the position it started scanning from.
  * 
  * the sorted array : [ 17, 27, 35, 40, 59, 97 ]
+ * 
+ * time complexity is O(n`2)
  */
 
 const swap = (arr, i, j) => [arr[i], arr[j]] = [arr[j], arr[i]]
